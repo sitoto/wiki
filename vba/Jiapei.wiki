@@ -4,5 +4,16 @@
 %toc
 
 =数据源=
-*CSV*
 
+2013-12-24
+数据导入格式和文件编码
+* add and use 'roo'gem;
+* csv (also use utf-8)
+* add code in controller
+* add excel's xls and xlsx (doing)
+* add upload error rescue $!.to_s
+*
+ 
+only support
+*CSV*
+*UTF-8*
