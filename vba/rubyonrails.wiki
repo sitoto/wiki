@@ -13,6 +13,29 @@
 
 
 ===Rails===
+
+====文件====
 # 文件上传
 # excel分解和导入、存储
 # csv分解和导入、存储
+
+====数据分组====
+@students=Student.all <br>
+@student_groups=@students.group_by{|s| s.gender}<br>
+
+那么现在得到的@student_groups就有两组,一组是male,一组是female.在对其进行循环的时候,使用hash循环的方式:
+
+<% @student_groups.each do |gender,students| %> <br>
+<%= gender %><br>
+<ul> <% students.each do |student| %> <li><%= student.name%></li> <% end %></ul><br>
+<% end %>
+
+*结果如下:*
+female
+    lucy
+    jessi
+
+male
+    jack
+    jim
+    mike

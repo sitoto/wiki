@@ -17,6 +17,10 @@
 <ul>
 <li><a href="#toc_1.0.1">Mongoid</a>
 <li><a href="#toc_1.0.2">Rails</a>
+<ul>
+<li><a href="#toc_1.0.2.1">文件</a>
+<li><a href="#toc_1.0.2.2">数据分组</a>
+</ul>
 </ul>
 </ul>
 </ul>
@@ -47,6 +51,8 @@ scope :draft, -&gt; { where(status: 0) }
 
 
 <h3 id="toc_1.0.2">Rails</h3>
+
+<h4 id="toc_1.0.2.1">文件</h4>
 <ol>
 <li>
 文件上传
@@ -58,6 +64,41 @@ excel分解和导入、存储
 csv分解和导入、存储
 
 </ol>
+
+<h4 id="toc_1.0.2.2">数据分组</h4>
+<p>
+@students=Student.all <br>
+@student_groups=@students.group_by{|s| s.gender}<br>
+</p>
+
+<p>
+那么现在得到的@student_groups就有两组,一组是male,一组是female.在对其进行循环的时候,使用hash循环的方式:
+</p>
+
+<p>
+&lt;% @student_groups.each do |gender,students| %&gt; <br>
+&lt;%= gender %&gt;<br>
+&lt;ul&gt; &lt;% students.each do |student| %&gt; &lt;li&gt;&lt;%= student.name%&gt;&lt;/li&gt; &lt;% end %&gt;&lt;/ul&gt;<br>
+&lt;% end %&gt;
+</p>
+
+<p>
+<strong>结果如下:</strong>
+female
+</p>
+<blockquote>
+lucy
+jessi
+</blockquote>
+
+<p>
+male
+</p>
+<blockquote>
+jack
+jim
+mike
+</blockquote>
 
 </body>
 </html>
