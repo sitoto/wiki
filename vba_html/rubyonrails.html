@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>开发知识点 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+
+<p>
+<a href="index.html">返回</a>
+<h1>目录</h1>
+<div class="toc">
+<ul>
+<li><a href="#toc_1">开发知识点</a>
+<ul>
+<li><a href="#toc_1.0.1">Mongoid</a>
+<li><a href="#toc_1.0.2">Rails</a>
+</ul>
+</ul>
+</ul>
+</div>
+</p>
+
+<h1 id="toc_1">开发知识点</h1>
+<h3 id="toc_1.0.1">Mongoid</h3>
+<ol>
+<li>
+MongoDB/Mongoid字段为 Boolean 属性的声明，:tpye =&gt; Boolean ,生成的数据为 1/0,实际应该为 true/false; 需要声明为：
+
+<ul>
+<li>
+field :locked, :type =&gt; Mongoid::Boolean, :default =&gt; false 
+
+</ul>
+<li>
+'user' belongs_to :last_agree_user, :class_name =&gt; 'User'
+
+<li>
+index :status =&gt; 1 &amp; index :status =&gt; -1 #<strong>1/-1表示创建索引使用正序/倒序</strong>
+
+<li>
+scope :draft, -&gt; { where(status: 0) }
+
+</ol>
+
+
+<h3 id="toc_1.0.2">Rails</h3>
+<ol>
+<li>
+文件上传
+
+<li>
+excel分解和导入、存储
+
+<li>
+csv分解和导入、存储
+
+</ol>
+
+</body>
+</html>

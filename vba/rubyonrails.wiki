@@ -1,0 +1,18 @@
+%title 开发知识点 
+
+[[index|返回]]
+%toc 目录
+
+=开发知识点=
+===Mongoid===
+# MongoDB/Mongoid字段为 Boolean 属性的声明，:tpye => Boolean ,生成的数据为 1/0,实际应该为 true/false; 需要声明为：
+ - field :locked, :type => Mongoid::Boolean, :default => false 
+# 'user' belongs_to :last_agree_user, :class_name => 'User'
+# index :status => 1 & index :status => -1 #*1/-1表示创建索引使用正序/倒序*
+# scope :draft, -> { where(status: 0) }
+
+
+===Rails===
+# 文件上传
+# excel分解和导入、存储
+# csv分解和导入、存储
