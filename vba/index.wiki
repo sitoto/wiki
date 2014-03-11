@@ -10,6 +10,10 @@
 =开发知识点=
 [[rubyonrails|Rails & DB etc]]
 
+[[==2014-03-11==]]
+* 在数据录入平台中加入 采集模块
+* fetch/AAP
+
 ==2014-02-13==
 * 修改图片存储thumb(50*50),middle(800*800)
 * 增加图片关联-类目关联(has_many)和数据项关联(has_and_belongs_to_many)
