@@ -1,5 +1,0 @@
-[[index]]
-
-1.project 表示采集任务（name，note，入口url, user_name）
-2.menu -nav 所有的采集的目录都存储在里面，多级目录设计
-3.content
