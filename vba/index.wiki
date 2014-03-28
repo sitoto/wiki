@@ -17,7 +17,7 @@
 
 == 2014-03-28 ==
 * 增加parts 的 position；必须增加，因为position也有意义, 重复part也有意义；
-* 去除重复方法：（realcar_no, main_id, sub_no, part_position）
+* 去除重复方法：（realcar_no, main_id, sub_no, part_position）唯一
 
 == 2014-03-27 == 
 * 增加Epctruckmodels index show
