@@ -15,11 +15,12 @@
 <ul>
 <li><a href="#toc_1">开发知识点</a>
 <ul>
-<li><a href="#toc_1.0.1">Mongoid</a>
-<li><a href="#toc_1.0.2">Rails</a>
+<li><a href="#toc_1.0.1">excel when import</a>
+<li><a href="#toc_1.0.2">Mongoid</a>
+<li><a href="#toc_1.0.3">Rails</a>
 <ul>
-<li><a href="#toc_1.0.2.1">文件</a>
-<li><a href="#toc_1.0.2.2">数据分组</a>
+<li><a href="#toc_1.0.3.1">文件</a>
+<li><a href="#toc_1.0.3.2">数据分组</a>
 </ul>
 </ul>
 </ul>
@@ -28,7 +29,15 @@
 </p>
 
 <h1 id="toc_1">开发知识点</h1>
-<h3 id="toc_1.0.1">Mongoid</h3>
+
+<h3 id="toc_1.0.1">excel when import</h3>
+<ol>
+<li>
+value = value.to_i.to_s if value.is_a?(Numeric)    
+
+</ol>
+
+<h3 id="toc_1.0.2">Mongoid</h3>
 <ol>
 <li>
 MongoDB/Mongoid字段为 Boolean 属性的声明，:tpye =&gt; Boolean ,生成的数据为 1/0,实际应该为 true/false; 需要声明为：
@@ -50,9 +59,9 @@ scope :draft, -&gt; { where(status: 0) }
 </ol>
 
 
-<h3 id="toc_1.0.2">Rails</h3>
+<h3 id="toc_1.0.3">Rails</h3>
 
-<h4 id="toc_1.0.2.1">文件</h4>
+<h4 id="toc_1.0.3.1">文件</h4>
 <ol>
 <li>
 文件上传
@@ -65,7 +74,7 @@ csv分解和导入、存储
 
 </ol>
 
-<h4 id="toc_1.0.2.2">数据分组</h4>
+<h4 id="toc_1.0.3.2">数据分组</h4>
 <p>
 @students=Student.all <br>
 @student_groups=@students.group_by{|s| s.gender}<br>

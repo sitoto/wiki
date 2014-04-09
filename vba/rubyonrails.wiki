@@ -4,6 +4,10 @@
 %toc 目录
 
 =开发知识点=
+
+=== excel when import  === 
+# value = value.to_i.to_s if value.is_a?(Numeric)    
+
 ===Mongoid===
 # MongoDB/Mongoid字段为 Boolean 属性的声明，:tpye => Boolean ,生成的数据为 1/0,实际应该为 true/false; 需要声明为：
  - field :locked, :type => Mongoid::Boolean, :default => false 

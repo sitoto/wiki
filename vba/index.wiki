@@ -15,6 +15,10 @@
 [[knowledge]]
 <hr>
 
+== 2014-04-09 ==
+* excel 导入 数字问题
+* 导入全部存为文本格式
+
 == 2014-03-28 ==
 * 增加parts 的 position；必须增加，因为position也有意义, 重复part也有意义；
 * 去除重复方法：（realcar_no, main_id, sub_no, part_position）唯一
